@@ -12,15 +12,20 @@
     "sanity"
   ],
   "dependencies": {
+    "@mdx-js/react": "^2.1.2",
+    "@sanity/code-input": "^3.0.0-v3-studio.2",
+    "@sanity/color-input": "^3.0.0-v3-studio.3",
+    "@sanity/dashboard": "^3.0.0-v3-studio.0",
     "@sanity/eslint-config-studio": "^2.0.0",
-    "eslint": "^8.6.0",
+    "eslint": "^8.19.0",
     "prettier": "^2.7.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "sanity": "dev-preview",
-    "styled-components": "^5.2.0"
+    "sanity-plugin-asset-source-unsplash": "^3.0.0-v3-studio.0",
+    "sanity-plugin-dashboard-widget-document-list": "^3.0.0-v3-studio.1",
+    "sanity-plugin-media": "^2.0.0-v3-studio.0",
+    "styled-components": "^5.3.5"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }

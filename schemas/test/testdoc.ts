@@ -18,6 +18,16 @@ export default {
       options: {
         disableNew: true,
       },
+    },
+    {
+      name: 'color',
+      title: 'Color',
+      type: 'color'
+    },
+    {
+      name: 'code',
+      title: 'Code',
+      type: 'code'
     }
   ],
 }
