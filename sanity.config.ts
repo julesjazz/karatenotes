@@ -6,7 +6,7 @@ export default createConfig({
   name: 'default',
   title: 'karatenotes',
 
-  projectId: 'n4hho7p9',
+  projectId: 'e8bs5ztm',
   dataset: 'production',
 
   plugins: [deskTool()],
