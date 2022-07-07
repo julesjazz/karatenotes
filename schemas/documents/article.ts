@@ -6,19 +6,24 @@ export default {
     select: {
       title: 'title',
       media: 'mainImage',
-      shared: 'shared',
+      published: 'published',
       category: 'category.title',
+      site: 'site.title',
     },
-    prepare({title, category, shared, media}: any) {
+    prepare({title, category, published, media, site}: any) {
       return {
         title: title,
-        subtitle: `${shared ? '🟢' : '🔴'} ${category ? category : 'No category'}`,
+        subtitle: `
+          ${published ? '🟢' : '🔴'}:
+          ${category ? category : 'No category'},
+          ${site ? site : 'No site'}
+        `,
         media: media || '',
-      }
+      };
     },
   },
   groups: [
-    {name: 'details', title: 'Details', default: true},
+    {name: 'details', title: 'Details'},
     {name: 'body', title: 'Body'},
   ],
   fields: [
@@ -30,19 +35,30 @@ export default {
     },
     {
       group: 'details',
-      name: 'shared',
-      title: 'Shared',
+      name: 'published',
+      title: 'published',
       type: 'boolean',
       initialValue: false,
-      // options: {
-      //   layout: 'checkbox',
-      // },
+      options: {
+        layout: 'checkbox',
+      },
+    },
+    {
+      group: 'details',
+      name: 'site',
+      title: 'Site',
+      type: 'reference',
+      to: {type: 'site'},
+      options: {
+        disableNew: true,
+      },
     },
     {
       group: 'details',
       name: 'category',
       title: 'Category',
       type: 'reference',
+      weak: true,
       to: {type: 'category'},
     },
     {
@@ -69,4 +85,4 @@ export default {
       type: 'blockContent',
     },
   ],
-}
+};
