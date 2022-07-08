@@ -37,6 +37,14 @@ export default {
       },
     },
     {
+      group: 'details',
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      weak: true,
+      to: {type: 'category'},
+    },
+    {
       type: 'image',
       options: {hotspot: true},
     },
